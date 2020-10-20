@@ -79,14 +79,6 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 								{startDate ? format(startDate, "MMMM DD, YYYY") : "Start Date"}
 							</Typography>
 						</Grid>
-						<Grid item className={classes.headerItem}>
-							<ArrowRightAlt color="action" />
-						</Grid>
-						<Grid item className={classes.headerItem}>
-							<Typography variant="subtitle1">
-								{endDate ? format(endDate, "MMMM DD, YYYY") : "End Date"}
-							</Typography>
-						</Grid>
 					</Grid>
 					<Divider />
 					<Grid container direction="row" justify="center" wrap="nowrap">
@@ -96,14 +88,6 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 							setValue={setFirstMonth}
 							navState={[true, canNavigateCloser]}
 							marker={MARKERS.FIRST_MONTH}
-						/>
-						<div className={classes.divider} />
-						<Month
-							{...commonProps}
-							value={secondMonth}
-							setValue={setSecondMonth}
-							navState={[canNavigateCloser, true]}
-							marker={MARKERS.SECOND_MONTH}
 						/>
 					</Grid>
 				</Grid>
