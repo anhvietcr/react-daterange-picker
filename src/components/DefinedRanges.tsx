@@ -21,7 +21,7 @@ const isSameRange = (first: DateRange, second: DateRange) => {
 
 const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = props => {
 	return (
-		<List>
+		<List className="date-list">
 			{props.ranges.map((range, idx) => (
 				<ListItem className="date-list-item" button key={idx} onClick={() => props.setRange(range)}>
 					<ListItemText
