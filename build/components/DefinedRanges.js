@@ -16,7 +16,7 @@ var isSameRange = function (first, second) {
     return false;
 };
 var DefinedRanges = function (props) {
-    return (react_1.default.createElement(core_1.List, null, props.ranges.map(function (range, idx) { return (react_1.default.createElement(core_1.ListItem, { className: "date-list-item", button: true, key: idx, onClick: function () { return props.setRange(range); } },
+    return (react_1.default.createElement(core_1.List, { className: "date-list" }, props.ranges.map(function (range, idx) { return (react_1.default.createElement(core_1.ListItem, { className: "date-list-item", button: true, key: idx, onClick: function () { return props.setRange(range); } },
         react_1.default.createElement(core_1.ListItemText, { className: utils_1.combine(isSameRange(range, props.selectedRange) && "date-range-selected"), primaryTypographyProps: {
                 variant: "body2",
                 style: {

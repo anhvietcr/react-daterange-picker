@@ -39,7 +39,7 @@ var styles = function (theme) {
 var Month = function (props) {
     var classes = props.classes, helpers = props.helpers, handlers = props.handlers, date = props.value, dateRange = props.dateRange, marker = props.marker, setDate = props.setValue, minDate = props.minDate, maxDate = props.maxDate;
     var _a = props.navState, back = _a[0], forward = _a[1];
-    return (React.createElement(core_1.Paper, { square: true, elevation: 0, className: classes.root },
+    return (React.createElement(core_1.Paper, { square: true, elevation: 0, className: "date-paper" },
         React.createElement(core_1.Grid, { container: true },
             React.createElement(Header_1.default, { date: date, setDate: setDate, nextDisabled: !forward, prevDisabled: !back, onClickPrevious: function () {
                     return handlers.onMonthNavigate(marker, types_1.NavigationAction.Previous);

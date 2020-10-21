@@ -48,9 +48,9 @@ var styles = function (theme) {
 };
 var Day = function (props) {
     var classes = props.classes;
-    return (React.createElement("div", { className: utils_1.combine(classes.buttonContainer, props.startOfRange && classes.leftBorderRadius, props.endOfRange && classes.rightBorderRadius, !props.disabled && props.highlighted && "date-highlighted") },
-        React.createElement(core_1.IconButton, { className: utils_1.combine(classes.button, !props.disabled && props.outlined && "date-outlined", !props.disabled && props.filled && "date-highlighted"), disabled: props.disabled, onClick: props.onClick, onMouseOver: props.onHover },
-            React.createElement(core_1.Typography, { color: !props.disabled ? "default" : "textSecondary", className: utils_1.combine(classes.buttonText, !props.disabled && props.filled && "date-contrast"), variant: "body2" }, props.value))));
+    return (React.createElement("div", { className: utils_1.combine("date-container-number", classes.buttonContainer, props.startOfRange && classes.leftBorderRadius, props.endOfRange && classes.rightBorderRadius, props.highlighted && "date-highlighted") },
+        React.createElement(core_1.IconButton, { className: utils_1.combine("date-number", classes.button, props.outlined && "date-outlined", props.filled && "date-highlighted"), onClick: props.onClick, onMouseOver: props.onHover },
+            React.createElement(core_1.Typography, { color: "default", className: utils_1.combine(classes.buttonText, props.filled && "date-contrast"), variant: "body2" }, props.value))));
 };
 exports.default = core_1.withStyles(styles)(Day);
 //# sourceMappingURL=Day.js.map
