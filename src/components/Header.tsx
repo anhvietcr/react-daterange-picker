@@ -75,7 +75,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 
 	return (
 		<Grid container justify="space-between" alignItems="center">
-			<Grid item className={classes.iconContainer}>
+			<Grid item className="date-iconContainer">
 				<IconButton
 					className={classes.icon}
 					disabled={prevDisabled}
@@ -110,7 +110,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 
 				{/* <Typography>{format(date, "MMMM YYYY")}</Typography> */}
 			</Grid>
-			<Grid item className={classes.iconContainer}>
+			<Grid item className="date-iconContainer">
 				<IconButton className={classes.icon} disabled={nextDisabled} onClick={onClickNext}>
 					<ChevronRight color={nextDisabled ? "disabled" : "action"} />
 				</IconButton>
