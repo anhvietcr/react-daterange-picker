@@ -23,7 +23,8 @@ const styles = (theme: Theme) =>
 		},
 		headerItem: {
 			flex: 1,
-			textAlign: "center"
+			textAlign: "center",
+			fontSize: 14,
 		},
 		divider: {
 			borderLeft: `1px solid ${theme.palette.action.hover}`,
@@ -76,7 +77,7 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 					<Grid container className={classes.header} alignItems="center">
 						<Grid item className={classes.headerItem}>
 							<Typography variant="subtitle1">
-								{startDate ? format(startDate, "MMMM DD, YYYY") : "Start Date"}
+								{startDate ? `${format(startDate, "DD/MM/YYYY")} - ${format(endDate, "DD/MM/YYYY")}` : ""}
 							</Typography>
 						</Grid>
 					</Grid>
