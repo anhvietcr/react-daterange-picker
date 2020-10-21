@@ -24,6 +24,7 @@ const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = props => {
 			{props.ranges.map((range, idx) => (
 				<ListItem button key={idx} onClick={() => props.setRange(range)}>
 					<ListItemText
+						className={isSameRange(range, props.selectedRange) && "date-range-selected"}
 						primaryTypographyProps={{
 							variant: "body2",
 							style: {
