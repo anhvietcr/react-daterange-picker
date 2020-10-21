@@ -21,7 +21,7 @@ import Header from "./Header";
 import Day from "./Day";
 import { NavigationAction, DateRange } from "../types";
 
-const WEEK_DAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+const WEEK_DAYS = ["CN", "T2", "T3", "W4", "T5", "T6", "T7"];
 
 const styles = (theme: Theme) =>
 	createStyles({
