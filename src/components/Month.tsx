@@ -74,7 +74,7 @@ const Month: React.FunctionComponent<MonthProps> = props => {
 
 	const [back, forward] = props.navState;
 	return (
-		<Paper square elevation={0} className={classes.root}>
+		<Paper square elevation={0} className={"date-paper"}>
 			<Grid container>
 				<Header
 					date={date}
