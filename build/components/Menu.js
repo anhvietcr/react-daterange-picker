@@ -27,7 +27,8 @@ var styles = function (theme) {
         },
         headerItem: {
             flex: 1,
-            textAlign: "center"
+            textAlign: "center",
+            fontSize: 14,
         },
         divider: {
             borderLeft: "1px solid " + theme.palette.action.hover,
@@ -43,13 +44,13 @@ var Menu = function (props) {
     return (react_1.default.createElement(core_1.Paper, { elevation: 5, square: true },
         react_1.default.createElement(core_1.Grid, { container: true, direction: "row", wrap: "nowrap" },
             react_1.default.createElement(core_1.Grid, null,
-                react_1.default.createElement(core_1.Grid, { container: true, className: classes.header, alignItems: "center" },
+                react_1.default.createElement(core_1.Grid, { container: true, className: "date-header", alignItems: "center" },
                     react_1.default.createElement(core_1.Grid, { item: true, className: classes.headerItem },
-                        react_1.default.createElement(core_1.Typography, { variant: "subtitle1" }, startDate ? date_fns_1.format(startDate, "MMMM DD, YYYY") : "Start Date"))),
-                react_1.default.createElement(core_1.Divider, null),
+                        react_1.default.createElement(core_1.Typography, { variant: "subtitle1" }, startDate && endDate ? date_fns_1.format(startDate, "DD/MM/YYYY") + " - " + date_fns_1.format(endDate, "DD/MM/YYYY") : ""))),
+                react_1.default.createElement(core_1.Divider, { className: "date-divider" }),
                 react_1.default.createElement(core_1.Grid, { container: true, direction: "row", justify: "center", wrap: "nowrap" },
                     react_1.default.createElement(Month_1.default, __assign({}, commonProps, { value: firstMonth, setValue: setFirstMonth, navState: [true, canNavigateCloser], marker: __1.MARKERS.FIRST_MONTH })))),
-            react_1.default.createElement("div", { className: classes.divider }),
+            react_1.default.createElement("div", { className: "date-divider" }),
             react_1.default.createElement(core_1.Grid, null,
                 react_1.default.createElement(DefinedRanges_1.default, { selectedRange: dateRange, ranges: ranges, setRange: setDateRange })))));
 };

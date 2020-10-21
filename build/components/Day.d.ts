@@ -12,5 +12,5 @@ interface DayProps extends WithStyles<typeof styles> {
     value: number | string;
 }
 declare const styles: (theme: Theme) => Record<"filled" | "button" | "outlined" | "leftBorderRadius" | "rightBorderRadius" | "buttonContainer" | "buttonText" | "highlighted" | "contrast", import("@material-ui/core/styles/withStyles").CSSProperties>;
-declare const _default: React.ComponentType<Pick<React.PropsWithChildren<DayProps>, "filled" | "disabled" | "children" | "onClick" | "outlined" | "value" | "highlighted" | "startOfRange" | "endOfRange" | "onHover"> & import("@material-ui/core").StyledComponentProps<"filled" | "button" | "outlined" | "leftBorderRadius" | "rightBorderRadius" | "buttonContainer" | "buttonText" | "highlighted" | "contrast">>;
+declare const _default: React.ComponentType<Pick<React.PropsWithChildren<DayProps>, "filled" | "disabled" | "children" | "onClick" | "value" | "outlined" | "highlighted" | "startOfRange" | "endOfRange" | "onHover"> & import("@material-ui/core").StyledComponentProps<"filled" | "button" | "outlined" | "leftBorderRadius" | "rightBorderRadius" | "buttonContainer" | "buttonText" | "highlighted" | "contrast">>;
 export default _default;

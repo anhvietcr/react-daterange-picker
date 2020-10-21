@@ -17,7 +17,7 @@ var utils_1 = require("../utils");
 var Header_1 = __importDefault(require("./Header"));
 var Day_1 = __importDefault(require("./Day"));
 var types_1 = require("../types");
-var WEEK_DAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+var WEEK_DAYS = ["CN", "T2", "T3", "W4", "T5", "T6", "T7"];
 var styles = function (theme) {
     return core_1.createStyles({
         root: {
