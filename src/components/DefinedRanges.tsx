@@ -2,6 +2,7 @@ import React from "react";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 import { DefinedRange, DateRange } from "../types";
 import { isSameDay } from "date-fns";
+import { combine } from "../utils";
 
 type DefinedRangesProps = {
 	setRange: (range: DateRange) => void;
@@ -24,7 +25,7 @@ const DefinedRanges: React.FunctionComponent<DefinedRangesProps> = props => {
 			{props.ranges.map((range, idx) => (
 				<ListItem button key={idx} onClick={() => props.setRange(range)}>
 					<ListItemText
-						className={isSameRange(range, props.selectedRange) && "date-range-selected"}
+						className={combine(isSameRange(range, props.selectedRange) && "date-range-selected")}
 						primaryTypographyProps={{
 							variant: "body2",
 							style: {
