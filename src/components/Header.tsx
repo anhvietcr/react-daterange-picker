@@ -23,7 +23,8 @@ interface HeaderProps extends WithStyles<typeof styles> {
 
 const styles = createStyles({
 	iconContainer: {
-		padding: 5
+		padding: 5,
+		opacity: 0,
 	},
 	icon: {
 		padding: 10,
@@ -34,18 +35,18 @@ const styles = createStyles({
 });
 
 const MONTHS = [
-	"01",
-	"02",
-	"03",
-	"04",
-	"05",
-	"06",
-	"07",
-	"08",
-	"09",
-	"10",
-	"11",
-	"12"
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"June",
+	"July",
+	"Aug",
+	"Sept",
+	"Oct",
+	"Nov",
+	"Dec"
 ];
 
 const generateYears = (relativeTo: Date, count: number) => {
@@ -74,6 +75,14 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 
 	return (
 		<Grid container justify="space-between" alignItems="center">
+			<Grid item className={classes.iconContainer}>
+				<IconButton
+					className={classes.icon}
+					disabled={prevDisabled}
+					onClick={onClickPrevious}>
+					<ChevronLeft color={prevDisabled ? "disabled" : "action"} />
+				</IconButton>
+			</Grid>
 			<Grid item>
 				<Select
 					value={getMonth(date)}
@@ -98,6 +107,13 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 						</MenuItem>
 					))}
 				</Select>
+
+				{/* <Typography>{format(date, "MMMM YYYY")}</Typography> */}
+			</Grid>
+			<Grid item className={classes.iconContainer}>
+				<IconButton className={classes.icon} disabled={nextDisabled} onClick={onClickNext}>
+					<ChevronRight color={nextDisabled ? "disabled" : "action"} />
+				</IconButton>
 			</Grid>
 		</Grid>
 	);
