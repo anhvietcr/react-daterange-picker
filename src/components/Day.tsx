@@ -62,25 +62,26 @@ const Day: React.FunctionComponent<DayProps> = props => {
 	return (
 		<div
 			className={combine(
+				"date-container-number",
 				classes.buttonContainer,
 				props.startOfRange && classes.leftBorderRadius,
 				props.endOfRange && classes.rightBorderRadius,
-				!props.disabled && props.highlighted && "date-highlighted"
+				props.highlighted && "date-highlighted"
 			)}>
 			<IconButton
 				className={combine(
+					"date-number",
 					classes.button,
-					!props.disabled && props.outlined && "date-outlined",
-					!props.disabled && props.filled && "date-highlighted"
+					props.outlined && "date-outlined",
+					props.filled && "date-highlighted"
 				)}
-				disabled={props.disabled}
 				onClick={props.onClick}
 				onMouseOver={props.onHover}>
 				<Typography
-					color={!props.disabled ? "default" : "textSecondary"}
+					color={"default"}
 					className={combine(
 						classes.buttonText,
-						!props.disabled && props.filled && "date-contrast"
+						props.filled && "date-contrast"
 					)}
 					variant="body2">
 					{props.value}
